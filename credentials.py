@@ -1,5 +1,5 @@
 import random
-
+import string
 
 class Credential:
 	'''
@@ -33,25 +33,3 @@ class Credential:
 		'''
 		gen_pass=''.join(random.choice(char) for _ in range(size))
 		return gen_pass
-
-	@classmethod
-	def display_credentials(cls,user_name):
-		   '''
-		   Class method to display the list of credentials saved
-		   '''
-		   user_credentials_list = []
-		   for credential in cls.credentials_list:
-		       if credential.user_name == user_name:
-		           user_credentials_list.append(credential)
-		   return user_credentials_list
-
-		   @classmethod
-	   	def check_user(cls,first_name,password):
-	   		'''
-	   		Method that checks if the name and password entered match entries in the users_list
-	   		'''
-	   		current_user = ''
-	   		for user in User.users_list:
-	   			if (user.first_name == first_name and user.password == password):
-	   				current_user = user.first_name
-	   		return current_user
