@@ -54,17 +54,17 @@ def display_credentials(user_name):
 	return Credential.display_credentials(user_name)
 
 def main():
-    # print(' ')
-
-	# while True:
+    print(' ')
+	print('Hello! Welcome to your Favorite PASSWORD LOCKER.')
+	while True:
 		print(' ')
 		print("-"*100)
 		print('Navigate using: \n ca-Create an Account \n li-Log In \n ex-Exit')
-		short_code = input('choose: ').lower().strip()
+		short_code = input('Enter a choice: ').lower().strip()
 		if short_code == 'ex':
-			# break
+			break
 
-		# elif short_code == 'ca':
+		elif short_code == 'ca':
 			print("-"*60)
 			print(' ')
 			print('To create a new account:')

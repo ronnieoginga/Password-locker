@@ -50,6 +50,6 @@ def find_by_site_name(cls, site_name):
     for credential in cls.credentials_list:
         if credential.site_name == site_name:
             return credential
-            
+
 if __name__ == '__main__':
 	unittest.main(verbosity=2)

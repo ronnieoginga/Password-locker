@@ -15,6 +15,7 @@ class TestCredentials(unittest.TestCase):
 		'''
 		self.new_credential = Credential('ronney','twitter','buoy','pswd526')
 
+
 	def test__init__(self):
 		'''
 		Test to if check the initialization/creation of credential instances is properly done
@@ -28,7 +29,7 @@ class TestCredentials(unittest.TestCase):
 		Function to clear the credentials list after every test
 		'''
 		Credential.credentials_list = []
-		# User.users_list = []
+		User.users_list = []
 
 	def test_display_credentials(self):
 		'''
@@ -39,7 +40,7 @@ class TestCredentials(unittest.TestCase):
 		twitter.save_credentials()
 		gmail = Credential('ronney','Gmail','oginga001ronney@gmail.com','pswd200')
 		gmail.save_credentials()
-		# self.assertEqual(len(Credential.display_credentials(twitter.user_name)),3)
+		self.assertEqual(len(Credential.display_credentials(twitter.user_name)),3)
 
 	def test_find_by_site_name(self):
 		'''
@@ -48,17 +49,26 @@ class TestCredentials(unittest.TestCase):
 		self.new_credential.save_credentials()
 		twitter = Credential('ronney','Twitter','buoy','pswd526')
 		twitter.save_credentials()
-		# credential_exists = Credential.find_by_site_name('Twitter')
-		# self.assertEqual(credential_exists,twitter)
+		credential_exists = Credential.find_by_site_name('Twitter')
+		self.assertEqual(credential_exists,twitter)
 
-@classmethod
-def find_by_site_name(cls, site_name):
-    '''
-    Method that takes in a site_name and returns a credential that matches that site_name.
-    '''
-    for credential in cls.credentials_list:
-        if credential.site_name == site_name:
-            return credential
+	def test_generate_password(self):
+		'''
+		Test to check if the generate password generates 8 character long alphanumeric numbers
+		'''
+		self.twitter.password = Credential('Twitter','maryjoe','001552333',"")
+		self.twitter.password = generate_password("")
+		self.assertEqual()
+
+
+
+	@classmethod
+	def copy_credential(cls,site_name):
+		'''
+		Class method that copies a credential's info after the credential's site name is entered
+		'''
+		find_credential = Credential.find_by_site_name(site_name)
+		return pyperclip.copy(find_credential.password)
 
 if __name__ == '__main__':
 	unittest.main(verbosity=2)
