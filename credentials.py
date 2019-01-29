@@ -1,5 +1,5 @@
 import random
-# import unittest
+import unittest
 from credentials import Credential
 
 class Credential:
