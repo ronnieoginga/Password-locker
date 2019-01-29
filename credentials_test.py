@@ -46,3 +46,6 @@ class TestCredentials(unittest.TestCase):
 		twitter.save_credentials()
 		credential_exists = Credential.find_by_site_name('Twitter')
 		self.assertEqual(credential_exists,twitter)
+
+        if __name__ == '__main__':
+    unittest.main()
