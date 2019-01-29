@@ -31,7 +31,7 @@ class TestUser(unittest.TestCase):
 		'''
 		Test to if check the initialization/creation of user instances is properly done
 		'''
-		self.assertEqual(self.new_user.first_name,'ronniei')
+		self.assertEqual(self.new_user.first_name,'ronnie')
 		self.assertEqual(self.new_user.last_name,'otieno')
 		self.assertEqual(self.new_user.password,'pswd100')
 
