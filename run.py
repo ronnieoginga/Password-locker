@@ -1,7 +1,8 @@
 #!/usr/bin/python3.6
 
 
-from user_credentials import User,Credential
+from user import User
+from credentials import Credential
 
 
 def create_user(fname,lname,password):
