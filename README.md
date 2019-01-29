@@ -26,3 +26,11 @@ For you to run the application:you need to use the comands below in your termina
 To run the tests for the class file:
 
     $ python3.6 user_credential_testpy
+
+# Technologies Used
+
+Python3.6
+
+# License
+
+MIT ©2018 RONALDOTIENO
