@@ -1,4 +1,6 @@
 import random
+# import unittest
+from credentials import Credential
 
 class Credential:
 	'''
