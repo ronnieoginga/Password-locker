@@ -12,7 +12,7 @@ class TestUser(unittest.TestCase):
 		'''
 		Function to test whether the login in function check_user works as expected
 		'''
-		self.new_user = User('silver','staar','pswd100')
+		self.new_user = User('ronnie','otieno','pswd100')
 		self.new_user.save_user()
 
 		for user in User.users_list:
@@ -50,6 +50,5 @@ def find_by_site_name(cls, site_name):
     for credential in cls.credentials_list:
         if credential.site_name == site_name:
             return credential
-
 if __name__ == '__main__':
 	unittest.main(verbosity=2)
