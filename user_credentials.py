@@ -69,7 +69,7 @@ class Credential:
 		return gen_pass
 	@classmethod
 	def find_by_site_name(cls, site_name):
-		'''
+		''' 
 		Method that takes in a site_name and returns a credential that matches that site_name.
 		'''
 		for credential in cls.credentials_list:
