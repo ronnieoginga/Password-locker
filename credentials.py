@@ -36,7 +36,7 @@ class Credential:
 		'''
 		# global users_list
 		Credential.credentials_list.append(self)
-
+	@classmethod
 	def generate_password(size=8, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
 		'''
 		Function to generate an 8 character password for a credential
@@ -52,7 +52,7 @@ class Credential:
 			if credential.site_name == site_name:
 				return credential
 
-	@classmethod
+
 	def display_credentials(cls,user_name):
 		'''
 		Class method to display the list of credentials saved
